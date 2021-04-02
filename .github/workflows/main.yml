@@ -1,19 +1,32 @@
-name: Master  # The name of your Workflow
+name: Extract Lisbon environment data
 
 on:
-  schedule:  # Tells Github to run this Workflow every 12h
-    - cron: "0 */12 * * *"
+    schedule:
+      - cron: "0 */12 * * *"
 
 jobs:
-  scrape-latest:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repo
-        uses: actions/checkout@v2
-      - name: Set up Python
-        uses: actions/setup-python@v2.0.0
-        with:
-          python-version: '3.7'
-      # Tells Github to run the file `extract_data_script.py` from your repository
-      - name: Run Master
-        run: python extract_data_script.py
+    build:
+        runs-on: ubuntu-latest
+        container: python:3
+
+        steps:
+          - uses: actions/checkout@v2
+            with:
+              ref: ${{ github.head_ref }}
+          - name: Configure pt_PT locale
+            run: |
+              apt-get update -y && apt-get install -y locales && echo "pt_PT.UTF-8 UTF-8" | tee -a /etc/locale.gen && locale-gen pt_PT.UTF-8
+          - name: Configure pt_PT (Europe/Lisbon) timezone
+            run: |
+              ln -fs /usr/share/zoneinfo/Europe/Lisbon /etc/localtime && dpkg-reconfigure --frontend noninteractive tzdata
+          - name: Install dependencies
+            run: |
+              python -m pip install --upgrade pip
+              python -m pip install -r requirements.txt
+          - name: Scrap lisbon environment data
+            run: python extract_data_script.py
+          - name: Commit changes
+            uses: stefanzweifel/git-auto-commit-action@v4.1.1
+            with:
+                commit_message: Update Lisbon environment data
+                branch: ${{ github.head_ref }}
