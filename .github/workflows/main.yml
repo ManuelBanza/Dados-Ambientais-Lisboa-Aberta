@@ -1,15 +1,19 @@
-name: Master
+name: Master  # The name of your Workflow
+
 on:
-  push:
-    branches:
-      - master
-  schedule:
-    - cron: '0 */12 * * *'
+  schedule:  # Tells Github to run this Workflow every 12h
+    - cron: "0 */12 * * *"
+
 jobs:
-  build:
+  scrape-latest:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
-    - name: Running
-      run: |
-        echo "Running!"
+      - name: Checkout repo
+        uses: actions/checkout@v2
+      - name: Set up Python
+        uses: actions/setup-python@v2.0.0
+        with:
+          python-version: '3.7'
+      # Tells Github to run the file `extract_data_script.py` from your repository
+      - name: Run Master
+        run: python extract_data_script.py
