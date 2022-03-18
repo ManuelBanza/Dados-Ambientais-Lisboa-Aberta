@@ -1,0 +1,11 @@
+,id,avg,date,dateStandard,value,unit,address,coordinates,date_modified,acronimo_short
+0,QA00NO0019,1h,202203181000000000,UTC,69.0,µg/m3,Monsanto - Alameda Keil do Amaral,"{'x': -92395, 'y': -104728, 'z': 0, 'lat': 38.72009921, 'lng': -9.195513512}",2022-03-18 10:00:00,QA00
+1,QA0NO20019,1h,202203181000000000,UTC,46.0,µg/m3,Monsanto - Alameda Keil do Amaral,"{'x': -92395, 'y': -104728, 'z': 0, 'lat': 38.72009921, 'lng': -9.195513512}",2022-03-18 10:00:00,QA0N
+2,QA00O30019,1h,202203181000000000,UTC,52.0,µg/m3,Monsanto - Alameda Keil do Amaral,"{'x': -92395, 'y': -104728, 'z': 0, 'lat': 38.72009921, 'lng': -9.195513512}",2022-03-18 10:00:00,QA00
+3,QAPM250019,1h,202203181000000000,UTC,3.0,µg/m3,Monsanto - Alameda Keil do Amaral,"{'x': -92395, 'y': -104728, 'z': 0, 'lat': 38.72009921, 'lng': -9.195513512}",2022-03-18 10:00:00,QAPM
+4,QAPM100019,1h,202203181000000000,UTC,10.0,µg/m3,Monsanto - Alameda Keil do Amaral,"{'x': -92395, 'y': -104728, 'z': 0, 'lat': 38.72009921, 'lng': -9.195513512}",2022-03-18 10:00:00,QAPM
+5,QA00CO0019,1h,202203181000000000,UTC,0.104823,mg/m3,Monsanto - Alameda Keil do Amaral,"{'x': -92395, 'y': -104728, 'z': 0, 'lat': 38.72009921, 'lng': -9.195513512}",2022-03-18 10:00:00,QA00
+6,RULAEQ0019,1h,202203181000000000,UTC,54.0,dB(A),Monsanto - Alameda Keil do Amaral,"{'x': -92395, 'y': -104728, 'z': 0, 'lat': 38.72009921, 'lng': -9.195513512}",2022-03-18 10:00:00,RULA
+7,ME00PA0019,1h,202203181000000000,UTC,1001.0,mbar,Monsanto - Alameda Keil do Amaral,"{'x': -92395, 'y': -104728, 'z': 0, 'lat': 38.72009921, 'lng': -9.195513512}",2022-03-18 10:00:00,ME00
+8,ME00HR0019,1h,202203181000000000,UTC,58.6,%,Monsanto - Alameda Keil do Amaral,"{'x': -92395, 'y': -104728, 'z': 0, 'lat': 38.72009921, 'lng': -9.195513512}",2022-03-18 10:00:00,ME00
+9,METEMP0019,1h,202203181000000000,UTC,14.9,ºC,Monsanto - Alameda Keil do Amaral,"{'x': -92395, 'y': -104728, 'z': 0, 'lat': 38.72009921, 'lng': -9.195513512}",2022-03-18 10:00:00,METE
